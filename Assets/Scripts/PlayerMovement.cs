@@ -23,6 +23,13 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask obstacleMask;
 
 
+    public float dashSpeed = 20f;
+    public float dashDuration = 0.2f;
+    private bool isDashing = false;
+    private float dashCooldown = 1f; // Time in seconds before another dash can be performed
+    private float dashCooldownTimer = 0f;
+
+
 
     bool isGrounded;
     Vector3 velocity;
@@ -40,6 +47,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (dashCooldownTimer > 0)
+        {
+            dashCooldownTimer -= Time.deltaTime;
+        }
+        
         isGrounded = Physics.CheckSphere(GroundChecker.position, groundDist, groundMask);
         
         if (isGrounded && velocity.y < 0)
@@ -68,6 +81,10 @@ public class PlayerMovement : MonoBehaviour
     {
         currentSpeed = crouchSpeed;
     }
+    if (Input.GetKeyDown(KeyCode.Q) && dashCooldownTimer <= 0f && !isDashing)
+        {
+            StartCoroutine(Dash());
+        }
 
 
         Vector3 move = transform.right * x + transform.forward * z;
@@ -163,6 +180,33 @@ IEnumerator SmoothCrouchChange(bool toCrouch)
         CharController.Move(Vector3.down * 0.05f); // Slight nudge
     }
 }
+
+IEnumerator Dash()
+{
+    isDashing = true;
+    float originalSpeed = currentSpeed;
+    currentSpeed = dashSpeed;
+
+    // Move the player forward in their current facing direction
+    Vector3 dashDirection = transform.forward; // Get the player's forward direction
+
+    // Dash forward
+    float dashTime = 0f;
+    while (dashTime < dashDuration)
+    {
+        CharController.Move(dashDirection * dashSpeed * Time.deltaTime);
+        dashTime += Time.deltaTime;
+        yield return null;
+    }
+
+    // Restore original speed and cooldown
+    currentSpeed = originalSpeed;
+    dashCooldownTimer = dashCooldown;
+
+    isDashing = false;
+}
+
+
 
 
 

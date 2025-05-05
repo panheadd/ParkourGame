@@ -540,6 +540,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5366636428401398311, guid: 8d3fc2a79c8924c88b78fcd35e18d82a, type: 3}
+      propertyPath: dashSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366636428401398311, guid: 8d3fc2a79c8924c88b78fcd35e18d82a, type: 3}
       propertyPath: sprintSpeed
       value: 8
       objectReference: {fileID: 0}
