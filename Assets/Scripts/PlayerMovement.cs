@@ -23,11 +23,15 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask obstacleMask;
 
 
+
     public float dashSpeed = 20f;
     public float dashDuration = 0.2f;
     private bool isDashing = false;
-    private float dashCooldown = 1f; // Time in seconds before another dash can be performed
+    private float dashCooldown = 1f; 
     private float dashCooldownTimer = 0f;
+
+    public bool doubleJump = false;
+    private bool candoubleJump;
 
 
 
@@ -48,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
+
         if (dashCooldownTimer > 0)
         {
             dashCooldownTimer -= Time.deltaTime;
@@ -58,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
+            candoubleJump = true;
         }
 
         float x = Input.GetAxis("Horizontal");
@@ -90,9 +96,18 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         CharController.Move(move * currentSpeed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump"))
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            if(isGrounded){
+                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                candoubleJump = true;
+            }
+            else if (doubleJump && candoubleJump)
+            {
+                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                candoubleJump = false; // Use up the double jump
+            }
+
         }
 
 
@@ -118,7 +133,6 @@ public class PlayerMovement : MonoBehaviour
 {
     if (isCrouching)
     {
-        // Check for ceiling before standing up
         float headClearance = originalHeight - crouchHeight;
         Vector3 checkStart = transform.position + Vector3.up * (crouchHeight / 2f);
         float checkRadius = CharController.radius - 0.05f;
@@ -173,11 +187,10 @@ IEnumerator SmoothCrouchChange(bool toCrouch)
     CharController.center = targetCenter;
     GroundChecker.localPosition = targetGroundChecker;
 
-    // Snap player down to ground to avoid hovering
     if (!toCrouch && isGrounded)
     {
         velocity.y = -2f;
-        CharController.Move(Vector3.down * 0.05f); // Slight nudge
+        CharController.Move(Vector3.down * 0.05f);
     }
 }
 
@@ -187,10 +200,8 @@ IEnumerator Dash()
     float originalSpeed = currentSpeed;
     currentSpeed = dashSpeed;
 
-    // Move the player forward in their current facing direction
-    Vector3 dashDirection = transform.forward; // Get the player's forward direction
+    Vector3 dashDirection = transform.forward;
 
-    // Dash forward
     float dashTime = 0f;
     while (dashTime < dashDuration)
     {
@@ -199,7 +210,6 @@ IEnumerator Dash()
         yield return null;
     }
 
-    // Restore original speed and cooldown
     currentSpeed = originalSpeed;
     dashCooldownTimer = dashCooldown;
 
