@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShowInfo : MonoBehaviour
+public class RedGreenBorderDisplayer : MonoBehaviour
 {
-    public GameObject info;
+  public List<RedGreenBorder> borders;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,16 +21,22 @@ public class ShowInfo : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            info.SetActive(true);
+            for (int i = 0; i < borders.Count; i++)
+        {
+            borders[i].diasappear = false;
         }
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            info.SetActive(false);
+            for (int i = 0; i < borders.Count; i++)
+        {
+            borders[i].diasappear = true;
+        }
         }
     }
 }
-

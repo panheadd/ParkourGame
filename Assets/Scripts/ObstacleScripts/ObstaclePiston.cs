@@ -17,7 +17,7 @@ public class ObstaclePiston : MonoBehaviour
 
         pistonSequence.Append(transform.DOMove(initialPosition + pushOffset, 0.5f)) 
                       .Append(transform.DOMove(initialPosition, 0.5f))               
-                      .AppendInterval(3f)                                           
+                      .AppendInterval(2f)                                           
                       .SetLoops(-1);                                                
     }
     // Update is called once per frame
