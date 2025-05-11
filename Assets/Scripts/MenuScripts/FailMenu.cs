@@ -32,14 +32,17 @@ public class FailMenu : MonoBehaviour
         switch (level)
         {
             case 1:
+                Time.timeScale = 1;
                 SceneManager.LoadScene("Level 1");
                 break;
 
             case 2:
+                Time.timeScale = 1;
                 SceneManager.LoadScene("Level 2");
                 break;
 
             case 3:
+                Time.timeScale = 1;
                 SceneManager.LoadScene("Level 3");
                 break;
 

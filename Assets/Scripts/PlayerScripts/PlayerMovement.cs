@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isGrounded;
     public Vector3 velocity;
 
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -92,6 +93,8 @@ public class PlayerMovement : MonoBehaviour
 
         velocity.y += gravity * Time.deltaTime;
         CharController.Move(velocity * Time.deltaTime);
+
+
 
         AdjustStepHeight();
     }

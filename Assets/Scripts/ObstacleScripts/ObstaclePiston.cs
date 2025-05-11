@@ -9,6 +9,8 @@ public class ObstaclePiston : MonoBehaviour
     private Vector3 initialPosition;
     // Start is called before the first frame update
 
+    public float interval = 2f;
+
     void Start()
     {
         initialPosition = transform.position;
@@ -17,7 +19,7 @@ public class ObstaclePiston : MonoBehaviour
 
         pistonSequence.Append(transform.DOMove(initialPosition + pushOffset, 0.5f)) 
                       .Append(transform.DOMove(initialPosition, 0.5f))               
-                      .AppendInterval(2f)                                           
+                      .AppendInterval(interval)                                           
                       .SetLoops(-1);                                                
     }
     // Update is called once per frame
