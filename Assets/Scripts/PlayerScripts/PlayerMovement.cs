@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    
 
 
         
@@ -89,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
             }
             
         }
-
+        
 
         velocity.y += gravity * Time.deltaTime;
         CharController.Move(velocity * Time.deltaTime);
