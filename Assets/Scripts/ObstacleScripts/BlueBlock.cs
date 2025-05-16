@@ -8,10 +8,11 @@ public class BlueBlock : MonoBehaviour
     public float timeBeforeFall = 2f;
     public bool playerOnBlock = false;
     public float timer = 0f;
+    public BlockResetManager resetManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -20,12 +21,22 @@ public class BlueBlock : MonoBehaviour
     {
         if (playerOnBlock)
         {
-            timer = timer+ Time.deltaTime;
+            timer = timer + Time.deltaTime;
             if (timer >= timeBeforeFall)
             {
-                gameObject.SetActive(false); 
+                resetManager.ResetBlock(gameObject, 5.0f);
+                gameObject.SetActive(false);
             }
         }
     }
+
+    IEnumerator ResetBlockAfterDelay(float delay)
+{
+    yield return new WaitForSeconds(delay);
+    timer = 0f;
+    playerOnBlock = false;
+    gameObject.SetActive(true);
+}
+
 
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlueBlockTrigger : MonoBehaviour
 {
-    public GameObject camera ;
+    public GameObject playerCamera ;
     public BlueBlock blueBlock;
     // Start is called before the first frame update
     void Start()
@@ -26,10 +26,17 @@ public class BlueBlockTrigger : MonoBehaviour
             blueBlock.playerOnBlock = true;
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            blueBlock.playerOnBlock = false;
+        }
+    }
 
     public IEnumerator Shake(float duration, float magnitude)
     {
-        Vector3 originalPos = camera.transform.localPosition;
+        Vector3 originalPos = playerCamera.transform.localPosition;
         float elapsed = 0f;
 
         while (elapsed < duration)
@@ -37,12 +44,12 @@ public class BlueBlockTrigger : MonoBehaviour
             float offsetX = Random.Range(-1f, 1f) * magnitude;
             float offsetY = Random.Range(-1f, 1f) * magnitude;
 
-            camera.transform.localPosition = originalPos + new Vector3(offsetX, offsetY, 0f);
+            playerCamera.transform.localPosition = originalPos + new Vector3(offsetX, offsetY, 0f);
 
             elapsed = elapsed+ Time.deltaTime;
             yield return null;
         }
 
-        camera.transform.localPosition = originalPos;
+        playerCamera.transform.localPosition = originalPos;
     }
 }
