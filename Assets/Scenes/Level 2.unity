@@ -844,6 +844,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 587255415}
     m_Modifications:
+    - target: {fileID: 3485147268413965924, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 906616057}
     - target: {fileID: 5015054987334496841, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
       propertyPath: m_Name
       value: BlueBlock (4)
@@ -2070,6 +2074,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 587255415}
     m_Modifications:
+    - target: {fileID: 3485147268413965924, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 906616057}
     - target: {fileID: 5015054987334496841, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
       propertyPath: m_Name
       value: BlueBlock (5)
@@ -2292,6 +2300,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 587255415}
     m_Modifications:
+    - target: {fileID: 3485147268413965924, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 906616057}
     - target: {fileID: 5015054987334496841, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
       propertyPath: m_Name
       value: BlueBlock (3)
@@ -3026,6 +3038,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 587255415}
     m_Modifications:
+    - target: {fileID: 3485147268413965924, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 906616057}
     - target: {fileID: 4848489002707940844, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.05
@@ -3572,6 +3588,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 587255415}
     m_Modifications:
+    - target: {fileID: 3485147268413965924, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 906616057}
     - target: {fileID: 5015054987334496841, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
       propertyPath: m_Name
       value: BlueBlock (9)
@@ -3641,6 +3661,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 587255415}
     m_Modifications:
+    - target: {fileID: 3485147268413965924, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 906616057}
     - target: {fileID: 5015054987334496841, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
       propertyPath: m_Name
       value: BlueBlock (11)
@@ -3958,6 +3982,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 587255415}
     m_Modifications:
+    - target: {fileID: 3485147268413965924, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 906616057}
     - target: {fileID: 5015054987334496841, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
       propertyPath: m_Name
       value: BlueBlock (12)
@@ -4146,6 +4174,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 587255415}
     m_Modifications:
+    - target: {fileID: 3485147268413965924, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 906616057}
     - target: {fileID: 5015054987334496841, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
       propertyPath: m_Name
       value: BlueBlock (8)
@@ -6912,6 +6944,7 @@ Transform:
   - {fileID: 957849013976430301}
   - {fileID: 619633510}
   - {fileID: 1547339702}
+  - {fileID: 1272615635}
   - {fileID: 1643108161}
   - {fileID: 1069631118}
   - {fileID: 1297082485}
@@ -9286,6 +9319,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 587255415}
     m_Modifications:
+    - target: {fileID: 3485147268413965924, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 906616057}
     - target: {fileID: 5015054987334496841, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
       propertyPath: m_Name
       value: BlueBlock (7)
@@ -10378,6 +10415,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+--- !u!1 &906616057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3216894916833887081, guid: e69e3e1c04780498e8803f519e6058f4, type: 3}
+  m_PrefabInstance: {fileID: 695088808}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &911602016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5725000371507048362, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
@@ -12953,6 +12995,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 587255415}
     m_Modifications:
+    - target: {fileID: 3485147268413965924, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 906616057}
     - target: {fileID: 5015054987334496841, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
       propertyPath: m_Name
       value: BlueBlock (6)
@@ -13018,6 +13064,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6954531691785998512, guid: cf8443763fc34314490f8a3e2f94dd37, type: 3}
   m_PrefabInstance: {fileID: 1881326436}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1272615635 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6861322049330950838, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+  m_PrefabInstance: {fileID: 1926731873}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1278214850
 PrefabInstance:
@@ -17086,6 +17137,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 587255415}
     m_Modifications:
+    - target: {fileID: 3485147268413965924, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 906616057}
     - target: {fileID: 5015054987334496841, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
       propertyPath: m_Name
       value: BlueBlock (2)
@@ -17209,6 +17264,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 587255415}
     m_Modifications:
+    - target: {fileID: 3485147268413965924, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 906616057}
     - target: {fileID: 5015054987334496841, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
       propertyPath: m_Name
       value: BlueBlock (10)
@@ -19181,6 +19240,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
+--- !u!1001 &1926731873
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 587255415}
+    m_Modifications:
+    - target: {fileID: 3485147268413965924, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 906616057}
+    - target: {fileID: 5015054987334496841, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: m_Name
+      value: BlueBlock (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861322049330950838, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861322049330950838, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861322049330950838, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861322049330950838, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861322049330950838, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861322049330950838, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861322049330950838, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861322049330950838, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861322049330950838, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861322049330950838, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37dba99834c254a8aae58aef5032b4e5, type: 3}
 --- !u!4 &1930233165 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5725000371507048362, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
